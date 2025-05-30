@@ -10,7 +10,7 @@ module.exports = (0, utils_1.defineConfig)({
             adminCors: process.env.ADMIN_CORS,
             authCors: process.env.AUTH_CORS,
             jwtSecret: process.env.JWT_SECRET || "supersecret",
-            cookieSecret: process.env.COOKIE_SECRET || "supersecret",
+            cookieSecret: process.env.COOKIE_SECRET || "supersecret"
         }
     },
 //      modules: {
