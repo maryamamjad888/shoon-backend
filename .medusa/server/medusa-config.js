@@ -16,16 +16,15 @@ module.exports = (0, utils_1.defineConfig)({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret"
     }
   },
-
-  // ✅ Add this section for modules that require database config
   modules: {
-    [utils_1.Modules.STOCK_LOCATION]: {
+    // Use string paths for module resolution
+    "stock-location": {
       resolve: "@medusajs/stock-location",
       options: {
-        clientUrl: process.env.DATABASE_URL, // use the same DB unless you’ve separated it
+        clientUrl: process.env.DATABASE_URL,
       },
     },
-    [utils_1.Modules.FULFILLMENT]: {
+    "fulfillment": {
       resolve: "@medusajs/fulfillment",
       options: {
         clientUrl: process.env.DATABASE_URL,
@@ -33,6 +32,3 @@ module.exports = (0, utils_1.defineConfig)({
     },
   },
 });
-
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVkdXNhLWNvbmZpZy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL21lZHVzYS1jb25maWcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxxREFBaUU7QUFFakUsSUFBQSxlQUFPLEVBQUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxRQUFRLElBQUksYUFBYSxFQUFFLE9BQU8sQ0FBQyxHQUFHLEVBQUUsQ0FBQyxDQUFBO0FBRTdELE1BQU0sQ0FBQyxPQUFPLEdBQUcsSUFBQSxvQkFBWSxFQUFDO0lBQzVCLGFBQWEsRUFBRTtRQUNiLFdBQVcsRUFBRSxPQUFPLENBQUMsR0FBRyxDQUFDLFlBQVk7UUFDckMsSUFBSSxFQUFFO1lBQ0osU0FBUyxFQUFFLE9BQU8sQ0FBQyxHQUFHLENBQUMsVUFBVztZQUNsQyxTQUFTLEVBQUUsT0FBTyxDQUFDLEdBQUcsQ0FBQyxVQUFXO1lBQ2xDLFFBQVEsRUFBRSxPQUFPLENBQUMsR0FBRyxDQUFDLFNBQVU7WUFDaEMsU0FBUyxFQUFFLE9BQU8sQ0FBQyxHQUFHLENBQUMsVUFBVSxJQUFJLGFBQWE7WUFDbEQsWUFBWSxFQUFFLE9BQU8sQ0FBQyxHQUFHLENBQUMsYUFBYSxJQUFJLGFBQWE7U0FDekQ7S0FDRjtDQUNGLENBQUMsQ0FBQSJ9
