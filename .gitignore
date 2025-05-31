@@ -2,7 +2,7 @@ node_modules/
 .next/
 .cache/
 .env
-dist/
-build/
+# dist/
+# build/
 .DS_Store
 *.log
