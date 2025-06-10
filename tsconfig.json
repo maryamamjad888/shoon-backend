@@ -10,7 +10,7 @@
     "skipDefaultLibCheck": true,
     "declaration": false,
     "sourceMap": false,
-    "inlineSourceMap": true,
+    "inlineSourceMap": true, 
     "outDir": "./.medusa/server",
     "rootDir": "./",
     "jsx": "react-jsx",
